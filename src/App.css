@@ -1,0 +1,47 @@
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+/* STARTING FROM 340PX */
+.container-all {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 479px) {
+  .section {
+    max-width: 438px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 727px) {
+  .section {
+    max-width: 438px;
+  }
+}
+@media screen and (min-width: 728px) and (max-width: 991px) {
+  .section {
+    max-width: 438px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .section {
+    max-width: 727px;
+  }
+}
+
+@media screen and (max-width: 1200px) and (max-width: 1439px) {
+  .section {
+    max-width: 950px;
+  }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+  .section {
+    max-width: 1400px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .section {
+    max-width: 1400px;
+  }
+}

@@ -1,0 +1,47 @@
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+body {
+  min-height: 100vh;
+  font-family: "Oswald", Impact, sans-serif;
+  line-height: 110%;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+ol,
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* CUSTOM PROJECT VARIABLES */
+:root {
+  /* --section-margin: 40px; */
+}
+
+/* REUSABLE CLASSES AND SUCH */
+.red {
+  /* color: var(--style-red); */
+}
+.bold {
+  font-weight: bold;
+}

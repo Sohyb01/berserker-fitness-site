@@ -1,0 +1,180 @@
+.design-system-container-all {
+  background-image: url(../assets/imgs/dark-bg.jpg);
+  background-repeat: repeat-y;
+  padding: 100px;
+  display: flex;
+  gap: 100px;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Buttons Container */
+.component-container-1 {
+  width: fit-content;
+  display: grid;
+  gap: 20px;
+  grid-template: auto auto auto auto / auto auto auto auto;
+}
+
+/* Variables to be reused (colors, font sizes, ...etc) */
+:root {
+  /* Colors */
+  --brzkr-light_red: #f94747;
+  --brzkr-red: #bb0f0f;
+  --brzkr-red_50pc: rgba(187, 15, 15, 0.5);
+  --brzkr-white: #fbf6f6;
+  --brzkr-black: #1c1c1c;
+  --brzkr-gray_1: #0d0d0d;
+  --brzkr-gray_2: #545454;
+  --brzkr-gray_3: #a0a0a0;
+  --brzkr-light_gray: #efefef;
+  --brzkr-error_orange: #ffae12;
+  --brzkr-success_green: #00d62f;
+  --brzkr-black_40pc: rgba(28, 28, 28, 0.4);
+  --brzkr-black_75pc: rgba(28, 28, 28, 0.75);
+
+  /* Font sizes */
+  --ts-1_16: 1rem;
+  --ts-2_21: 1.3125rem;
+  --ts-3_27: 1.6875rem;
+  --ts-4_36: 2.25rem;
+  --ts-5_47: 2.9375rem;
+  --ts-6_61: 3.8125rem;
+  --ts-7_80: 5rem;
+
+  /* Line heights */
+  --t-tall: 170%;
+  --t-short: 110%;
+}
+
+/* Small objects / barriers */
+.vertical-barrier {
+  width: 3px;
+  background: var(--brzkr-black);
+  border-radius: 100px;
+}
+
+/* Buttons + all their styles */
+.berserker-btn {
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display: grid;
+  place-items: center; */
+  padding: 5px 10px; /* Minimum padding, Changed by more specific targeting for specific sections*/
+}
+.w-b {
+  background: var(--brzkr-white);
+  color: var(--brzkr-black);
+}
+.b-w {
+  background: var(--brzkr-black);
+  color: var(--brzkr-white);
+}
+.g-w {
+  background: var(--brzkr-gray_2);
+  color: var(--brzkr-white);
+}
+.lr-w {
+  background: var(--brzkr-light_red);
+  color: var(--brzkr-white);
+}
+.btn-arrow-b,
+.btn-arrow-w {
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 12px; /* or 24 depending on the button size*/
+  margin-left: 10px;
+  aspect-ratio: 10.5/18;
+  background-image: url(../assets/imgs/arrow-right.svg);
+}
+.btn-arrow-b {
+  background-image: url(../assets/imgs/arrow-right-black.svg);
+}
+.white-shadow {
+  box-shadow: 2px 2px 0px 0px rgba(255, 255, 255, 0.7);
+}
+/* Animations to be added later */
+
+/* Links */
+.link,
+.fancy-link-button {
+  color: var(--brzkr-white);
+}
+.link:hover,
+.fancy-link-button:hover {
+  cursor: pointer;
+  color: var(--brzkr-gray_2);
+}
+.fancy-link-button {
+  background: transparent;
+  padding-inline: 0px;
+  border-bottom: 2px solid transparent;
+}
+.fancy-link-button.on {
+  border-bottom: 2px solid var(--brzkr-light_red);
+}
+
+/* Sign Up form */
+.component-container-2 {
+  display: flex;
+  gap: 20px;
+}
+
+.sign-up-form-container {
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid var(--brzkr-black);
+  background: var(--brzkr-light_gray, #efefef);
+  padding: 40px;
+  max-width: 573px;
+}
+.sign-up-form-selection {
+  display: flex;
+  gap: 10px;
+}
+.sign-up-form-selection .fancy-link-button {
+  color: var(--brzkr-black);
+}
+.sign-up-form-selection .fancy-link-button:hover {
+  color: var(--brzkr-gray_3);
+}
+
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+.sign-up-inputs-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+}
+.sign-up-input-field {
+  font-size: var(--ts-1_16);
+  display: flex;
+  padding: 8px 10px;
+  align-items: start;
+  gap: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--brzkr-gray_3);
+  width: 100%;
+}
+.sign-up-form > button {
+  font-size: var(--ts-3_27);
+  line-height: var(--t-short);
+  padding: 10px 20px;
+  border-radius: 3px;
+}
