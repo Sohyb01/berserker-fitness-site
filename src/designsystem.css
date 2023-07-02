@@ -61,37 +61,71 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: var(--ts-3_27);
+  line-height: var(--t-short);
   /* display: grid;
   place-items: center; */
   padding: 5px 10px; /* Minimum padding, Changed by more specific targeting for specific sections*/
 }
+.berserker-btn:hover {
+  cursor: pointer;
+}
 .w-b {
   background: var(--brzkr-white);
   color: var(--brzkr-black);
+  fill: var(--brzkr-black);
+}
+.w-b:hover {
+  background: var(--brzkr-black);
+  color: var(--brzkr-white);
+}
+.w-b:hover .btn-arrow {
+  fill: var(--brzkr-white);
 }
 .b-w {
   background: var(--brzkr-black);
   color: var(--brzkr-white);
+  fill: var(--brzkr-white);
 }
 .g-w {
   background: var(--brzkr-gray_2);
   color: var(--brzkr-white);
+  fill: var(--brzkr-white);
 }
 .lr-w {
   background: var(--brzkr-light_red);
   color: var(--brzkr-white);
+  fill: var(--brzkr-white);
 }
-.btn-arrow-b,
-.btn-arrow-w {
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 12px; /* or 24 depending on the button size*/
+.b-w:hover,
+.g-w:hover,
+.lr-w:hover {
+  background: var(--brzkr-white);
+  color: var(--brzkr-black);
+}
+.b-w:hover .btn-arrow,
+.g-w:hover .btn-arrow,
+.lr-w:hover .btn-arrow {
+  fill: var(--brzkr-black);
+}
+.btn-arrow {
+  height: fit-content;
+  width: fit-content;
   margin-left: 10px;
-  aspect-ratio: 10.5/18;
-  background-image: url(../assets/imgs/arrow-right.svg);
+  height: 24px !important; /* or 24 depending on the button size*/
+  width: 12px !important;
+  fill: var(--brzkr-white);
 }
-.btn-arrow-b {
-  background-image: url(../assets/imgs/arrow-right-black.svg);
+.btn-arrow g {
+  height: 100%; /* or 24 depending on the button size*/
+}
+.b-w > .btn-arrow,
+.lr-w > .btn-arrow,
+.g-w > .btn-arrow {
+  fill: var(--brzkr-white);
+}
+.w-b > .btn-arrow {
+  fill: var(--brzkr-black);
 }
 .white-shadow {
   box-shadow: 2px 2px 0px 0px rgba(255, 255, 255, 0.7);
@@ -162,7 +196,7 @@
   width: 100%;
   gap: 12px;
 }
-.sign-up-input-field {
+.sign-up-input {
   font-size: var(--ts-1_16);
   display: flex;
   padding: 8px 10px;
@@ -174,7 +208,21 @@
 }
 .sign-up-form > button {
   font-size: var(--ts-3_27);
-  line-height: var(--t-short);
+  line-height: var(--t-shotrt);
   padding: 10px 20px;
   border-radius: 3px;
+}
+.input-and-error-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 10px;
+}
+.input-and-error-container .error-state {
+  border: 2px solid var(--brzkr-error_orange);
+}
+.input-and-error-container .input-error-message {
+  color: var(--brzkr-error_orange);
 }

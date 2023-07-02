@@ -1,53 +1,32 @@
 import BerserkerButton from "./BerserkerButton.tsx";
+import FormInput from "./FormInput.tsx";
 
 const LoginForm = () => {
   return (
     <form className="sign-up-form">
       <div className="sign-up-inputs-container">
-        {/* <label htmlFor="first-name">First Name:</label> */}
-        <input
-          placeholder="First Name"
-          className="sign-up-input-field"
-          type="text"
-          id="first-name"
-          name="first-name"
-        ></input>
-
-        {/* <label htmlFor="last-name">Last Name:</label> */}
-        <input
-          placeholder="Last Name"
-          className="sign-up-input-field"
-          type="text"
-          id="last-name"
-          name="last-name"
-        ></input>
-
-        {/* <label htmlFor="middle-name">Middle Name:</label> */}
-        <input
+        <FormInput
           placeholder="E-mail"
-          className="sign-up-input-field"
-          type="text"
-          id="middle-name"
-          name="middle-name"
-        ></input>
+          inputName="e-mail"
+          inputId="e-mail"
+          inputType="text"
+          formTest={
+            /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/
+          } /*The Regular Expression used to test the input field, for form validation */
+          errorMessage=""
+        ></FormInput>
 
         {/* <label htmlFor="suffix">Suffix:</label> */}
-        <input
+        <FormInput
           placeholder="Password"
-          className="sign-up-input-field"
-          type="password"
-          id="password"
-          name="suffix"
-        ></input>
-
-        {/* <label htmlFor="suffix">Suffix:</label> */}
-        <input
-          placeholder="Retype Password"
-          className="sign-up-input-field"
-          type="password"
-          id="retypepassword"
-          name="suffix"
-        ></input>
+          inputName="password"
+          inputId="password"
+          inputType="password"
+          formTest={
+            /^[a-zA-Z0-9 !@#$%^&*()\-_=+{}[\]|;:'",.<>/?`~]*$/
+          } /*The Regular Expression used to test the input field, for form validation */
+          errorMessage="Error! Incorrect email or password"
+        ></FormInput>
       </div>
       <BerserkerButton
         type="submit"
