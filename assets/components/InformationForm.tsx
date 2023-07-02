@@ -4,7 +4,7 @@ import LoginForm from "./LoginForm";
 import { useState } from "react";
 
 const InformationForm = () => {
-  const [selection, setSelection] = useState("Log In");
+  const [selection, setSelection] = useState("Sign Up");
   const handleSelection = (mode: string) => {
     setSelection(mode);
   };

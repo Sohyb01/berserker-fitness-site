@@ -6,8 +6,10 @@
   gap: 100px;
   flex-direction: column;
   min-height: 100vh;
+  width: 1700px;
 }
-
+.component-container {
+}
 /* Buttons Container */
 .component-container-1 {
   width: fit-content;
@@ -225,4 +227,101 @@
 }
 .input-and-error-container .input-error-message {
   color: var(--brzkr-error_orange);
+}
+.mobile-navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+  max-width: 728px;
+}
+.mobile-navbar button {
+  width: 100%;
+}
+
+/* Services section */
+.services-section {
+  width: 1500px;
+}
+
+.services-slider {
+  width: 1220px;
+  height: 370px;
+  position: relative;
+  display: flex;
+}
+.service {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 340px;
+  line-height: var(--t-short);
+  opacity: 0;
+  transition: all 0.3s linear;
+  color: var(--brzkr-white);
+  line-height: var(--t-short);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.services-slider .slide {
+  opacity: 0;
+  z-index: -10;
+}
+.services-slider .activeSlide {
+  opacity: 1;
+  transform: translateX(calc(100% + 100px));
+}
+.services-slider .lastSlide {
+  opacity: 1;
+}
+.services-slider .lastLastSlide {
+  transform: translateX(calc(-100% - 100px));
+}
+.services-slider .nextSlide {
+  opacity: 1;
+  transform: translateX(calc(200% + 200px));
+}
+.services-slider .nextNextSlide {
+  transform: translateX(calc(300% + 300px));
+}
+
+.service-img {
+  height: 150px;
+}
+.service-name {
+  width: auto;
+  font-size: var(--ts-5_47);
+  line-height: var(--t-short);
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.service-description {
+  font-size: var(--ts-3_27);
+  line-height: var(--t-tall);
+}
+/* Services Navigation */
+.services-navigation {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.services-section button {
+  background-color: transparent;
+  fill: var(--brzkr-white);
+  z-index: 1;
+}
+.services-section button:hover {
+  fill: var(--brzkr-gray_2);
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+.dot-indicator {
 }
