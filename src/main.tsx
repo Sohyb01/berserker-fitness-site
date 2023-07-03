@@ -5,6 +5,6 @@ import DesignSystem from "../assets/components/Design System.tsx";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <DesignSystem></DesignSystem>
+    <App></App>
   </React.StrictMode>
 );

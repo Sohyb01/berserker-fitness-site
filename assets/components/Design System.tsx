@@ -6,6 +6,7 @@ import InformationForm from "./InformationForm.tsx";
 import FancyLink from "./FancyLink.tsx";
 import Services from "./Services.tsx";
 import Testimonials from "./Testimonials.tsx";
+import Navbar from "./Navbar.tsx";
 
 function DesignSystem() {
   return (
@@ -68,6 +69,11 @@ function DesignSystem() {
             <BerserkerButton scheme="w-b"></BerserkerButton>
             <BerserkerButton scheme="lr-w"></BerserkerButton>
           </div>
+        </div>
+
+        {/* Normal Navigation */}
+        <div className="component-container">
+          <Navbar></Navbar>
         </div>
 
         {/* Services Section */}

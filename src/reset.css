@@ -11,6 +11,7 @@ body {
   min-height: 100vh;
   font-family: "Oswald", Impact, sans-serif;
   line-height: 110%;
+  margin: 0px;
 }
 *,
 *::before,

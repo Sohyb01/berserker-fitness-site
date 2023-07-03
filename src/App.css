@@ -4,11 +4,268 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: url(../assets/imgs/dark-bg.jpg);
+  background-size: contain;
+}
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+body {
+  min-height: 100vh;
+  font-family: "Oswald", Impact, sans-serif;
+  line-height: 110%;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+ol,
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* CUSTOM PROJECT VARIABLES */
+:root {
+  /* Colors */
+  --brzkr-light_red: #f94747;
+  --brzkr-red: #bb0f0f;
+  --brzkr-red_50pc: rgba(187, 15, 15, 0.5);
+  --brzkr-white: #fbf6f6;
+  --brzkr-black: #1c1c1c;
+  --brzkr-gray_1: #0d0d0d;
+  --brzkr-gray_2: #545454;
+  --brzkr-gray_3: #a0a0a0;
+  --brzkr-light_gray: #efefef;
+  --brzkr-error_orange: #ffae12;
+  --brzkr-success_green: #00d62f;
+  --brzkr-black_40pc: rgba(28, 28, 28, 0.4);
+  --brzkr-black_75pc: rgba(28, 28, 28, 0.75);
+
+  /* Font sizes */
+  --ts-1_16: 1rem;
+  --ts-2_21: 1.3125rem;
+  --ts-3_27: 1.6875rem;
+  --ts-4_36: 2.25rem;
+  --ts-5_47: 2.9375rem;
+  --ts-6_61: 3.8125rem;
+  --ts-7_80: 5rem;
+
+  /* Line heights */
+  --t-tall: 170%;
+  --t-short: 110%;
+
+  /* Shadows / Effects */
+  --testimonials-shadow: 8px 16px 1px 0px rgba(255, 255, 255, 0.2);
+}
+/* Buttons + all their styles */
+.berserker-btn {
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--ts-3_27);
+  line-height: var(--t-short);
+  /* display: grid;
+  place-items: center; */
+  padding: 5px 10px; /* Minimum padding, Changed by more specific targeting for specific sections*/
+}
+.berserker-btn:hover {
+  cursor: pointer;
+}
+.w-b {
+  background: var(--brzkr-white);
+  color: var(--brzkr-black);
+  fill: var(--brzkr-black);
+}
+.w-b:hover {
+  background: var(--brzkr-black);
+  color: var(--brzkr-white);
+}
+.w-b:hover .btn-arrow {
+  fill: var(--brzkr-white);
+}
+.b-w {
+  background: var(--brzkr-black);
+  color: var(--brzkr-white);
+  fill: var(--brzkr-white);
+}
+.g-w {
+  background: var(--brzkr-gray_2);
+  color: var(--brzkr-white);
+  fill: var(--brzkr-white);
+}
+.lr-w {
+  background: var(--brzkr-light_red);
+  color: var(--brzkr-white);
+  fill: var(--brzkr-white);
+}
+.b-w:hover,
+.g-w:hover,
+.lr-w:hover {
+  background: var(--brzkr-white);
+  color: var(--brzkr-black);
+}
+.b-w:hover .btn-arrow,
+.g-w:hover .btn-arrow,
+.lr-w:hover .btn-arrow {
+  fill: var(--brzkr-black);
+}
+.btn-arrow {
+  height: fit-content;
+  width: fit-content;
+  height: 24px; /* or 24 depending on the button size*/
+  width: 12px;
+  fill: var(--brzkr-white);
+}
+.btn-arrow g {
+  height: 100%; /* or 24 depending on the button size*/
+}
+.b-w > .btn-arrow,
+.lr-w > .btn-arrow,
+.g-w > .btn-arrow {
+  fill: var(--brzkr-white);
+}
+.w-b > .btn-arrow {
+  fill: var(--brzkr-black);
+}
+.white-shadow {
+  box-shadow: 2px 2px 0px 0px rgba(255, 255, 255, 0.7);
+}
+/* Small objects / barriers */
+.vertical-barrier {
+  width: 3px;
+  background: var(--brzkr-black);
+  border-radius: 100px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* SPECIFIC SECTION STYLING */
+/* ------------ */
+/* Common across all breakpoints */
+
+/* Hero Section */
+.section--hero {
+  color: var(--brzkr-white);
+  background-image: url(../assets/imgs/hero.bg.png);
+  background-size: cover;
+}
+.hero-section-buttons {
+  display: flex;
+  flex-direction: column;
+}
+.hero-section-content h1 {
+  line-height: var(--t-short);
+}
+.hero-section-content p {
+  line-height: var(--t-tall);
+}
+.hero-section-buttons button {
+  gap: 10px;
+}
+.hero-section-buttons svg {
+  margin: 0px;
+}
+
+/* ----- */
+/* About section */
+.section--about {
+  color: var(--brzkr-white);
+}
+.about-section-content h1 {
+  line-height: var(--t-short);
+  margin-bottom: 10px;
+}
+.about-section-buttons-area h1 {
+  line-height: var(--t-tall);
+}
+.about-section-buttons-container {
+  display: flex;
+  gap: 20px;
+}
+.about-section-buttons-container button {
+  font-size: var(--ts-1_16);
+  gap: 5px;
+  padding: 10px 10px;
+}
+.about-section-buttons-container .btn-arrow {
+  height: 18px;
+}
+.about-section-content p {
+  line-height: var(--t-tall);
+}
+.about-image {
+  background-image: url(../assets/imgs/pushdowns-guy.jpg);
+  background-size: contain;
 }
 
 @media screen and (max-width: 479px) {
   .section {
     max-width: 438px;
+  }
+  /* Hero Section */
+  .section--hero {
+    padding: 84px 10px;
+    background-position: -210px 0px;
+  }
+  .hero-section-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .hero-section-content h1 {
+    font-size: var(--ts-5_47);
+  }
+  .hero-section-content p {
+    font-size: var(--ts-2_21);
+  }
+  .hero-section-buttons {
+    gap: 10px;
+  }
+  .hero-section-buttons button {
+    font-size: var(--ts-1_16);
+  }
+  /* ----- */
+  /* About section */
+  .section--about {
+    padding: 10px;
+  }
+  .about-section-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .about-section-content h1 {
+    font-size: var(--ts-3_27);
+  }
+  .about-section-content p {
+  }
+  .about-image {
+    height: 300px;
+    width: 300px;
+  }
+  .about-section-buttons-area {
   }
 }
 @media screen and (min-width: 480px) and (max-width: 727px) {
@@ -20,28 +277,33 @@
   .section {
     max-width: 438px;
   }
+  /* Hero Section */
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   .section {
     max-width: 727px;
   }
+  /* Hero Section */
 }
 
 @media screen and (max-width: 1200px) and (max-width: 1439px) {
   .section {
     max-width: 950px;
   }
+  /* Hero Section */
 }
 
 @media screen and (min-width: 1440px) and (max-width: 1919px) {
   .section {
     max-width: 1400px;
   }
+  /* Hero Section */
 }
 
 @media screen and (min-width: 1920px) {
   .section {
     max-width: 1400px;
   }
+  /* Hero Section */
 }

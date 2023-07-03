@@ -117,8 +117,8 @@
   height: fit-content;
   width: fit-content;
   margin-left: 10px;
-  height: 24px !important; /* or 24 depending on the button size*/
-  width: 12px !important;
+  height: 24px; /* or 24 depending on the button size*/
+  width: 12px;
   fill: var(--brzkr-white);
 }
 .btn-arrow g {
@@ -231,24 +231,28 @@
 .input-and-error-container .input-error-message {
   color: var(--brzkr-error_orange);
 }
-.mobile-navbar {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  padding: 40px;
-  max-width: 728px;
-}
-.mobile-navbar button {
-  width: 100%;
-}
 
 /* Services section */
 .services-section {
   width: 1500px;
+  color: var(--brzkr-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
 }
-
+.services-header {
+  text-align: center;
+}
+.services-header h1 {
+  font-size: var(--ts-5_47);
+  line-height: var(--t-short);
+  margin-bottom: 10px;
+}
+.services-header h3 {
+  font-size: var(--ts-3_27);
+  line-height: var(--t-short);
+}
 .services-slider {
   width: 1220px;
   height: 370px;
@@ -419,4 +423,39 @@
 }
 .testimonials-slider .nextTestimonial {
   opacity: 1;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1500px;
+  background-color: var(--brzkr-black_40pc);
+}
+.navbar-logo {
+  background-image: url("../assets/imgs/logo.png");
+  aspect-ratio: 231/98;
+  height: 98px;
+}
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  font-size: var(--ts-3_27);
+}
+.signup-button Button {
+  padding: 10px 20px;
+}
+.mobile-navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+  max-width: 728px;
+}
+.mobile-navbar button {
+  width: 100%;
 }

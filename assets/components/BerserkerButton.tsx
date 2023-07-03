@@ -1,5 +1,4 @@
 const BerserkerButton = (props: any) => {
-  console.log(props.arrow);
   return (
     <button className={`berserker-btn + ${props.scheme} + ${props.shadow}`}>
       {props.content ? props.content : "Button"}
