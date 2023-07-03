@@ -5,6 +5,7 @@ import BerserkerButton from "./BerserkerButton.tsx";
 import InformationForm from "./InformationForm.tsx";
 import FancyLink from "./FancyLink.tsx";
 import Services from "./Services.tsx";
+import Testimonials from "./Testimonials.tsx";
 
 function DesignSystem() {
   return (
@@ -74,6 +75,10 @@ function DesignSystem() {
           <div className="services-section">
             <Services></Services>
           </div>
+        </div>
+        {/* Testimonials Section */}
+        <div className="component-container">
+          <Testimonials></Testimonials>
         </div>
       </div>
     </>
