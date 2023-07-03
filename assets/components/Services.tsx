@@ -4,6 +4,7 @@ import services from "../services";
 const Services = () => {
   const [data, setData] = useState(services);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   //   To make sure we stay within the index of the number of services
   useEffect(() => {
@@ -25,7 +26,7 @@ const Services = () => {
   //     };
   //   }, [currentIndex]);
   return (
-    <div className="services-section">
+    <div className="services-section-content">
       <div className="services-header">
         <h1>Our Services</h1>
         <h3>What we give you to help you succeed!</h3>
@@ -80,8 +81,19 @@ const Services = () => {
               position = "lastLastSlide";
             }
 
-            return (
+            return screenWidth > 991 ? (
               <div className={`service ${position}`} key={id}>
+                <img
+                  // src={process.env.PUBLIC_URL + "/" + img}
+                  src={img}
+                  alt={name}
+                  className="service-img"
+                />
+                <div className="service-name">{name}</div>
+                <div className="service-description">{description}</div>
+              </div>
+            ) : (
+              <div className={`service`} key={id}>
                 <img
                   // src={process.env.PUBLIC_URL + "/" + img}
                   src={img}

@@ -156,12 +156,12 @@
   border-bottom: 2px solid var(--brzkr-light_red);
 }
 
-/* Sign Up form */
 .component-container-2 {
   display: flex;
   gap: 20px;
 }
 
+/* Sign Up form */
 .sign-up-form-container {
   display: flex;
   gap: 40px;

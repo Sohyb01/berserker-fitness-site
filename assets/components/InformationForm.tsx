@@ -10,15 +10,13 @@ const InformationForm = () => {
   };
 
   return (
-    <div>
-      <div className="sign-up-form-container">
-        <FormSelection
-          selection={selection}
-          handleSelection={handleSelection}
-        ></FormSelection>
-        {(selection == "Log In" && <LoginForm></LoginForm>) ||
-          (selection == "Sign Up" && <SignupForm></SignupForm>)}
-      </div>
+    <div className="sign-up-form-container">
+      <FormSelection
+        selection={selection}
+        handleSelection={handleSelection}
+      ></FormSelection>
+      {(selection == "Log In" && <LoginForm></LoginForm>) ||
+        (selection == "Sign Up" && <SignupForm></SignupForm>)}
     </div>
   );
 };

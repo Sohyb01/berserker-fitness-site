@@ -31,7 +31,7 @@ const LoginForm = () => {
       <BerserkerButton
         type="submit"
         scheme="lr-w"
-        content="Submit"
+        content="Log InP"
       ></BerserkerButton>
     </form>
   );

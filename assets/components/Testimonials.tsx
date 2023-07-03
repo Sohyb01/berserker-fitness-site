@@ -4,6 +4,8 @@ import testimonials from "../testimonials";
 const Testimonials = () => {
   const [data, setData] = useState(testimonials);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
   useEffect(() => {
     const lastIndex = data.length - 1;
     if (currentIndex < 0) {
@@ -15,7 +17,7 @@ const Testimonials = () => {
   }, [currentIndex, data]);
 
   return (
-    <div className="testimonials-section">
+    <div className="testimonials-section-content">
       <div className="testimonials-header">
         <h1>Testimonials & Transformations</h1>
         <h3>Check out what our previous clients have achieved</h3>
