@@ -1,6 +1,7 @@
 import BerserkerButton from "../assets/components/BerserkerButton";
 import FormInput from "../assets/components/FormInput";
 import InformationForm from "../assets/components/InformationForm";
+import Navbar from "../assets/components/Navbar";
 import Services from "../assets/components/Services";
 import Testimonials from "../assets/components/Testimonials";
 import "./App.css";
@@ -9,6 +10,9 @@ function App() {
   return (
     <>
       <div className="container-all">
+        <div className="section--navbar section">
+          <Navbar></Navbar>
+        </div>
         <section className="section--hero section">
           <div className="hero-section-content">
             <h1>Achieve the strength and physique of your dreams</h1>
@@ -73,7 +77,7 @@ function App() {
             </article>
           </div>
         </section>
-        <section className="section--services section">
+        {/* <section className="section--services section">
           <Services></Services>
         </section>
         <section className="section--newsletter section">
@@ -89,9 +93,7 @@ function App() {
                 inputName="e-mail"
                 inputId="e-mail"
                 inputType="text"
-                formTest={
-                  /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/
-                } /*The Regular Expression used to test the input field, for form validation */
+                formTest={/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/}
                 errorMessage="Error! Please enter a valid e-mail address format"
               ></FormInput>
             </div>
@@ -172,7 +174,7 @@ function App() {
               Design & Code by Sohyb Mansour
             </article>
           </div>
-        </section>
+        </section> */}
       </div>
     </>
   );
