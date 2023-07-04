@@ -17,7 +17,7 @@ const Testimonials = () => {
   }, [currentIndex, data]);
 
   return (
-    <div className="testimonials-section-content">
+    <div className="testimonials-section-content section-content">
       <div className="testimonials-header">
         <h1>Testimonials & Transformations</h1>
         <h3>Check out what our previous clients have achieved</h3>

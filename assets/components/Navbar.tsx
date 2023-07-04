@@ -3,19 +3,19 @@ import BerserkerButton from "./BerserkerButton";
 
 const Navbar = () => {
   return (
-    <nav className="navbar">
-      <div className="navbar-logo"></div>
+    <nav className="navbar section-content">
+      <a href="#" className="navbar-logo"></a>
       <div className="navbar-links">
-        <a className="link" href="#">
+        <a className="link" href="#about">
           Why work with us?
         </a>
-        <a className="link" href="#">
+        <a className="link" href="#services">
           Services
         </a>
-        <a className="link" href="#">
+        <a className="link" href="#testimonials">
           Testimonials
         </a>
-        <a className="link signup-button" href="#">
+        <a className="link signup-button" href="#join">
           <BerserkerButton
             scheme="lr-w"
             shadow="white-shadow"

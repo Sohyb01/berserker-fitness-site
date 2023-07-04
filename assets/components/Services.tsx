@@ -26,7 +26,7 @@ const Services = () => {
   //     };
   //   }, [currentIndex]);
   return (
-    <div className="services-section-content">
+    <div className="services-section-content section-content">
       <div className="services-header">
         <h1>Our Services</h1>
         <h3>What we give you to help you succeed!</h3>

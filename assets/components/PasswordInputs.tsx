@@ -35,7 +35,7 @@ const PasswordInputs = ({ formTest, errorMessage, ...props }) => {
       <input
         className={`sign-up-input ${error ? "error-state" : ""}`}
         placeholder="Retype Password"
-        type="retype-password"
+        type="password"
         id="retype-password"
         name="retype-password"
         value={retypePasswordValue}
