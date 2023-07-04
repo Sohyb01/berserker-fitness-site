@@ -36,6 +36,12 @@ const Testimonials = () => {
             position = "nextTestimonial";
           }
           if (
+            testimonialIndex === currentIndex + 2 ||
+            (currentIndex == data.length - 1 && testimonialIndex == 1)
+          ) {
+            position = "nextNextTestimonial";
+          }
+          if (
             testimonialIndex === currentIndex - 1 ||
             (currentIndex == 0 && testimonialIndex == data.length - 1)
           ) {

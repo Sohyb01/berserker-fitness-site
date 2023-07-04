@@ -57,7 +57,7 @@ function App() {
                 guarantee.
               </p>
             </article>
-            <article className="about-sections-buttons-area">
+            <article className="about-section-buttons-area">
               <h1>So why wait?</h1>
               <div className="about-section-buttons-container">
                 <BerserkerButton
@@ -77,7 +77,7 @@ function App() {
             </article>
           </div>
         </section>
-        {/* <section className="section--services section">
+        <section className="section--services section">
           <Services></Services>
         </section>
         <section className="section--newsletter section">
@@ -174,7 +174,7 @@ function App() {
               Design & Code by Sohyb Mansour
             </article>
           </div>
-        </section> */}
+        </section>
       </div>
     </>
   );

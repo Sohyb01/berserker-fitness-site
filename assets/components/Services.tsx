@@ -81,7 +81,7 @@ const Services = () => {
               position = "lastLastSlide";
             }
 
-            return screenWidth > 991 ? (
+            return screenWidth >= 992 ? (
               <div className={`service ${position}`} key={id}>
                 <img
                   // src={process.env.PUBLIC_URL + "/" + img}
