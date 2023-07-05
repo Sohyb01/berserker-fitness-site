@@ -1,6 +1,8 @@
-import { useState } from "react";
-
-const FancyLink = (props: any) => {
+const FancyLink = (props: {
+  handleSelection: (mode: string) => void;
+  content: string;
+  selection: string;
+}) => {
   const handleSelection = props.handleSelection;
   return (
     <button

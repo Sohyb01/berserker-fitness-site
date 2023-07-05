@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import FancyLink from "./FancyLink";
 
 const FormSelection = (props: any) => {

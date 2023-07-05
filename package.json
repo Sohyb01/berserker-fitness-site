@@ -5,6 +5,7 @@
   "type": "module",
   "homepage": "https://sohyb01.github.io/berserker-fitness",
   "scripts": {
+    "start": "react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "dev": "vite",

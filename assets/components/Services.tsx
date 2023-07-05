@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { useEffect, useState } from "react";
 import services from "../services";
 
 const Services = () => {
-  const [data, setData] = useState(services);
+  const [data] = useState(services);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [screenWidth] = useState(window.innerWidth);
 
   //   To make sure we stay within the index of the number of services
   useEffect(() => {

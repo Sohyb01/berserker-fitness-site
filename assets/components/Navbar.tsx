@@ -1,4 +1,3 @@
-import React from "react";
 import BerserkerButton from "./BerserkerButton";
 
 const Navbar = () => {

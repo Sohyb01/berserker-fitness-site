@@ -3,7 +3,7 @@ import "../../src/designsystem.css";
 import "../../src/reset.css";
 import BerserkerButton from "./BerserkerButton.tsx";
 import InformationForm from "./InformationForm.tsx";
-import FancyLink from "./FancyLink.tsx";
+// import FancyLink from "./FancyLink.tsx";
 import Services from "./Services.tsx";
 import Testimonials from "./Testimonials.tsx";
 import Navbar from "./Navbar.tsx";
@@ -51,12 +51,12 @@ function DesignSystem() {
           ></BerserkerButton>
         </div>
         {/* ---------- Links for navbar---------- */}
-        <div className="component-container-2">
+        {/* <div className="component-container-2">
           <a className="link" href="#">
             Link
           </a>
           <FancyLink></FancyLink>
-        </div>
+        </div> */}
         {/* Sign up and Log in form */}
         <div className="component-container">
           <InformationForm></InformationForm>

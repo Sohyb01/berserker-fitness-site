@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { useEffect, useState } from "react";
 import testimonials from "../testimonials";
 
 const Testimonials = () => {
-  const [data, setData] = useState(testimonials);
+  const [data] = useState(testimonials);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [_screenWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     const lastIndex = data.length - 1;
@@ -73,7 +74,7 @@ const Testimonials = () => {
             />
           </svg>
         </button>
-        {data.map((testimonial, index) => {
+        {data.map((_testimonial, index) => {
           let state = "";
 
           if (index === currentIndex) {

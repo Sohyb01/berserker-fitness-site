@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-const PasswordInputs = ({ formTest, errorMessage, ...props }) => {
+const PasswordInputs = (props: { formTest: RegExp; errorMessage: string }) => {
   const [error, setError] = useState(false);
   const [passwordInputValue, setPasswordInputValue] = useState("");
   const [retypePasswordValue, setRetypePasswordValue] = useState("");
@@ -25,7 +25,7 @@ const PasswordInputs = ({ formTest, errorMessage, ...props }) => {
         }}
         onBlur={() => validateForm()}
       ></input>
-      {formTest.test(passwordInputValue) == false && (
+      {props.formTest.test(passwordInputValue) == false && (
         <div className="input-error-message">
           {
             "Error! Can only contain English numbers, letters, and commonly used symbols"
@@ -44,7 +44,7 @@ const PasswordInputs = ({ formTest, errorMessage, ...props }) => {
         }}
         onBlur={() => validateForm()}
       ></input>
-      {error && <div className="input-error-message">{errorMessage}</div>}
+      {error && <div className="input-error-message">{props.errorMessage}</div>}
     </div>
   );
 };
