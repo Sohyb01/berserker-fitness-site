@@ -51,7 +51,11 @@ const Testimonials = () => {
 
           return (
             <div className={`testimonial ${position}`} key={id}>
-              <img src={img} alt={name} className="testimonial-img" />
+              <div
+                className="testimonial-img"
+                style={{ backgroundImage: `url(${img})` }}
+              ></div>
+              {/* <img src={img} alt={name} className="testimonial-img" /> */}
               <p className="testimonial-quote">{quote}</p>
               <p className="testimonial-name">{name}</p>
             </div>

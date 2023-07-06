@@ -116,7 +116,8 @@ function App() {
           </div>
         </section>
         <section className="section--footer section" id="footer">
-          <img src="./assets/imgs/footer-wave.svg" alt="" />
+          {/* <img src="./assets/imgs/footer-wave.svg" alt="" /> */}
+          <div className="footer-wave"></div>
           <div className="footer-content section-content">
             <article className="socials-and-number">
               <a href="https://www.facebook.com/profile.php?id=100003393718419">

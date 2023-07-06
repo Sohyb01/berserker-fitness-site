@@ -84,23 +84,20 @@ const Services = () => {
 
             return screenWidth >= 992 ? (
               <div className={`service ${position}`} key={id}>
-                <img
-                  // src={process.env.PUBLIC_URL + "/" + img}
-                  src={img}
-                  alt={name}
+                <div
                   className="service-img"
-                />
+                  style={{ backgroundImage: `url(${img})` }}
+                ></div>
                 <div className="service-name">{name}</div>
                 <div className="service-description">{description}</div>
               </div>
             ) : (
               <div className={`service`} key={id}>
-                <img
-                  // src={process.env.PUBLIC_URL + "/" + img}
-                  src={img}
-                  alt={name}
+                <div className="service-img"></div>
+                <div
                   className="service-img"
-                />
+                  style={{ backgroundImage: `url(${img})` }}
+                ></div>
                 <div className="service-name">{name}</div>
                 <div className="service-description">{description}</div>
               </div>
