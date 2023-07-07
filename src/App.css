@@ -41,7 +41,10 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px;
+}
 /* CUSTOM PROJECT VARIABLES */
 :root {
   /* Colors */
@@ -202,6 +205,10 @@ a {
   background-size: contain;
   aspect-ratio: 104/44;
 }
+.menu-icon {
+  cursor: pointer;
+  background: none;
+}
 .navbar-links {
   align-items: center;
   gap: 80px;
@@ -214,16 +221,32 @@ a {
   padding: 10px 20px;
 }
 .mobile-navbar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: var(--brzkr-black_75pc);
+  width: 100%;
+  transform: translateY(-100%);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
   padding: 40px;
-  max-width: 728px;
+  transition: 0.3s ease-in-out;
+  transition-delay: 0ms;
 }
+.mobile-navbar.open {
+  transform: translateY(0%);
+}
+.mobile-navbar.closed {
+  transform: translateY(-100%);
+}
+.mobile-navbar a,
 .mobile-navbar button {
   width: 100%;
+  max-width: 500px;
+  font-size: var(--ts-2_21);
 }
 
 /* Hero Section */
@@ -1293,6 +1316,9 @@ the url must be set through css */
   .navbar {
     max-width: none;
   }
+  .mobile-navbar {
+    display: none;
+  }
   /* ----- */
   /* Hero Section */
   .section--hero {
@@ -1591,6 +1617,9 @@ the url must be set through css */
   .footer-content,
   .navbar {
     max-width: none;
+  }
+  .mobile-navbar {
+    display: none;
   }
   /* ----- */
   /* Navbar */
@@ -1944,6 +1973,9 @@ the url must be set through css */
   .navbar {
     max-width: none;
   }
+  .mobile-navbar {
+    display: none;
+  }
   /* ----- */
   /* Navbar */
   .section--navbar {
@@ -2249,6 +2281,9 @@ the url must be set through css */
   .footer-content,
   .navbar {
     max-width: none;
+  }
+  .mobile-navbar {
+    display: none;
   }
   /* ----- */
   /* Navbar */

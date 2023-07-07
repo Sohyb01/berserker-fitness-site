@@ -1,6 +1,9 @@
+import { useState } from "react";
 import BerserkerButton from "./BerserkerButton";
 
 const Navbar = () => {
+  const [mobileNavbarOpen, setMobileNavbarOpen] = useState("closed");
+
   return (
     <nav className="navbar section-content">
       <a href="#" className="navbar-logo"></a>
@@ -22,7 +25,7 @@ const Navbar = () => {
           ></BerserkerButton>
         </a>
       </div>
-      <a href="" className="menu-icon">
+      <button className="menu-icon" onClick={() => setMobileNavbarOpen("open")}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -35,7 +38,36 @@ const Navbar = () => {
             fill="#FBF6F6"
           />
         </svg>
-      </a>
+      </button>
+      <div
+        className={`mobile-navbar ${mobileNavbarOpen}`}
+        onClick={() => setMobileNavbarOpen("closed")}
+      >
+        <a href="#about">
+          <BerserkerButton
+            content="Why work with us?"
+            scheme="w-b"
+          ></BerserkerButton>
+        </a>
+        <a href="#services">
+          <BerserkerButton
+            content="Our Services"
+            scheme="w-b"
+          ></BerserkerButton>
+        </a>
+        <a href="#testimonials">
+          <BerserkerButton
+            content="Testimonials"
+            scheme="w-b"
+          ></BerserkerButton>
+        </a>
+        <a href="#join">
+          <BerserkerButton
+            content="Start Today!"
+            scheme="lr-w"
+          ></BerserkerButton>
+        </a>
+      </div>
     </nav>
   );
 };
